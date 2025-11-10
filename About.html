@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | LAWRANCE TUMWINE VICTOR</title>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      z-index: 100;
+    }
+
+    header h1 {
+      color: #0ff;
+      font-size: 24px;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    /* ABOUT SECTION */
+    section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 120px 20px 60px 20px;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      max-width: 1100px;
+      gap: 50px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+
+    .about-container.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .about-img {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-img img {
+      width: 350px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid rgb(0, 179, 255);
+      box-shadow: 0 0 25px rgb(0, 255, 132);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .about-img img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px #0ff;
+    }
+
+    .about-text {
+      flex: 2;
+      text-align: left;
+    }
+
+    .about-text h2 {
+      font-size: 36px;
+      color: #0ff;
+      text-shadow: 0 0 15px #0ff;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: #ccc;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0a0a0a;
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-text {
+        text-align: center;
+      }
+
+      .about-img img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>LAWRANCE TUMWINE VICTOR</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="contact2.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="about-container" id="aboutContainer">
+      <div class="about-img">
+        <img src="Lawrence (2).jpg" alt="Lawrance Tumwine Victor">
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          Hey there! I'm <strong>Lawrance Tumwine Victor</strong> — a passionate, creative professional driven by curiosity and purpose.
+          I love bringing ideas to life through design and innovation.
+          <br><br>
+          My work focuses on growth, collaboration, and meaningful impact.
+          Outside of work, I enjoy exploring new technologies, networking, and constantly learning new skills.
+          <br><br>
+          This page gives you a glimpse into who I am and the values that drive me every day.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Lawrance Tumwine Victor | All Rights Reserved
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Fade-in animation when scrolling
+    const aboutContainer = document.getElementById('aboutContainer');
+
+    function revealSection() {
+      const sectionTop = aboutContainer.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if (sectionTop < windowHeight - 100) {
+        aboutContainer.classList.add('visible');
+      }
+    }
+
+    window.addEventListener('scroll', revealSection);
+    window.addEventListener('load', revealSection);
+  </script>
+</body>
+</html>
