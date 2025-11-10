@@ -1,0 +1,21 @@
+#Home {
+  background: url('Lawrence3.jpg') no-repeat center center/cover;
+  height:1500px;
+}
+section {
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 10px; /* tighter spacing */
+}
+.contact-container {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+.contact-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
