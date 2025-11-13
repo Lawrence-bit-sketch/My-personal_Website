@@ -1,6 +1,7 @@
-#Home {
-  background: url('Lawrence3.jpg') no-repeat center center/cover;
-  height:1500px;
+body {
+  background: url('tech5.jpeg') no-repeat center center/cover;
+  height:1500%;
+
 }
 section {
   min-height: auto;
