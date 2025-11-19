@@ -125,6 +125,28 @@
       font-size: 14px;
     }
 
+    /* --- Grid Gallery --- */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    /* --- Image Styling --- */
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    }
+
+
     /* RESPONSIVE */
     @media (max-width: 768px) {
       .about-container {
@@ -151,7 +173,7 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="About.html">About</a>
-      <a href="contact2.html">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
@@ -196,5 +218,26 @@
     window.addEventListener('scroll', revealSection);
     window.addEventListener('load', revealSection);
   </script>
+
+  <h1>Sample Technological Activities</h1>
+
+  <div class="gallery">
+    
+    <img src="prog1.jpeg" alt="project1">
+    <img src="prog2.jpeg" alt="project2">
+    <img src="prog3.jpeg" alt="project3">
+    <img src="prog4.jpeg" alt="project4">
+
+    <img src="prog5.jpeg" alt="project5">
+    <img src="prog6.jpeg" alt="project6">
+    <img src="tech 1.jpeg" alt="project7">
+    <img src="tech2.jpeg" alt="project8">
+
+    <img src="tech3.jpeg" alt="project9">
+    <img src="tech4.jpeg" alt="project10">
+    <img src="tech5.jpeg" alt="project11">
+    <img src="prog1.jpeg" alt="project12">
+  </div>
+
 </body>
 </html>
